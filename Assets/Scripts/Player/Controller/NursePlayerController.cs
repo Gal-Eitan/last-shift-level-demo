@@ -19,6 +19,8 @@ public class NursePlayerController : MonoBehaviour
     public float interactFireTime = 0.3f;
     public UnityEvent onInteract;
 
+    
+
     Rigidbody2D rb;
     Animator anim;
     SpriteRenderer sr;
@@ -38,7 +40,7 @@ public class NursePlayerController : MonoBehaviour
         else
         {
             move = ReadMove();
-            Debug.Log(move);
+            //Debug.Log(move);
             if (move.sqrMagnitude > 1f) move.Normalize();
             if (move.x > 0.01f) sr.flipX = false;
             else if (move.x < -0.01f) sr.flipX = true;
@@ -57,6 +59,7 @@ public class NursePlayerController : MonoBehaviour
         lockTimer = interactDuration;
         anim.SetTrigger("Interact");
         Invoke(nameof(FireInteract), interactFireTime);
+        onInteract.Invoke();
     }
 
     void FireInteract() { onInteract?.Invoke(); }
