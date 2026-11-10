@@ -5564,13 +5564,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392f1814d8da01448b253571b5319574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShiftTimer
-  shiftDuration: 8:00
+  shiftDuration: 0:30
   timeScale: 1
   timerText: {fileID: 1780986652}
   onShiftEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4715836315258030173, guid: f2babdd17417a094c948f360ee5324d0, type: 3}
         m_TargetAssemblyTypeName: VictoryAndLossScreenManager, Assembly-CSharp
         m_MethodName: ShowVictoryScreen
         m_Mode: 1
