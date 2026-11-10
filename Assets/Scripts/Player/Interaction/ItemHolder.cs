@@ -10,7 +10,6 @@ public class ItemHolder : MonoBehaviour
     
     public GameObject holdThisItem()
     {
-
         gameObject.SetActive(false);
         Debug.Log("held");
         return gameObject;
