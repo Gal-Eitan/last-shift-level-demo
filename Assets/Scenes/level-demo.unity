@@ -996,7 +996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 0.75686276}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 0.7921569}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1951,7 +1951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d902fdd389b74449db6e2ffbdefe9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MobileSettings
-  SHOW_TOUCH_SCREEN: 1
+  SHOW_TOUCH_SCREEN: 0
 --- !u!1 &1254903168
 GameObject:
   m_ObjectHideFlags: 0
@@ -5364,6 +5364,7 @@ GameObject:
   - component: {fileID: 1780986651}
   - component: {fileID: 1780986653}
   - component: {fileID: 1780986652}
+  - component: {fileID: 1780986654}
   m_Layer: 5
   m_Name: ShiftTime
   m_TagString: Untagged
@@ -5490,6 +5491,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780986650}
   m_CullTransparentMesh: 1
+--- !u!114 &1780986654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780986650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392f1814d8da01448b253571b5319574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShiftTimer
+  shiftDuration: 8:00
+  timeScale: 1
+  timerText: {fileID: 1780986652}
+  onShiftEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: VictoryAndLossScreenManager, Assembly-CSharp
+        m_MethodName: ShowVictoryScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1845508950
 GameObject:
   m_ObjectHideFlags: 0
@@ -5815,131 +5846,6 @@ RectTransform:
   m_AnchoredPosition: {x: 6.3, y: 1.59}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &2085934446
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -4026285907313915127, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4026285907313915127, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_Size.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4026285907313915127, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4026285907313915127, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -4026285907313915127, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -4026285907313915127, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: -4026285907313915127, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: -4026285907313915127, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: -4026285907313915127, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: -4026285907313915127, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2263900717713477848, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_Name
-      value: Item_For_Delivering
-      objectReference: {fileID: 0}
-    - target: {fileID: 3182300268901158646, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_Size.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3182300268901158646, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_Size.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 3182300268901158646, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1762432507852110112, guid: ab18d89d61500d34887e63ce74600406, type: 3}
-    - target: {fileID: 3182300268901158646, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3374053728523893747, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: item_name
-      value: First Aid Kit
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204641253699752775, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204641253699752775, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204641253699752775, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.126407
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204641253699752775, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.27383792
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204641253699752775, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204641253699752775, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204641253699752775, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204641253699752775, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204641253699752775, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204641253699752775, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204641253699752775, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204641253699752775, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: edb69366de0a1294387d23015f16f7bf, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5951,6 +5857,5 @@ SceneRoots:
   - {fileID: 1856250170}
   - {fileID: 276406717}
   - {fileID: 773906098}
-  - {fileID: 2085934446}
   - {fileID: 1975134238}
   - {fileID: 349750282}
